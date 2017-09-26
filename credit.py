@@ -34,6 +34,14 @@ while True:
     cc_num = list(cc_num)
     print(cc_num)
     digit_check = check_digit(cc_num)
-    new_cc2 = [new_cc_num(cc_num)]
-    new_cc2.reverse()
-    print(new_cc2)
+    new_cc2 = new_cc_num(cc_num)
+    new_cc4 = double(new_cc3)
+    new_cc5 = subtract_nine(new_cc4)
+    cc_sum = sum_list(new_cc5)
+    print(str(cc_sum)[1])
+    if digit_check == int(str(cc_sum)[1]):
+        print('Valid!')
+        break
+    else:
+        print('Not valid!')
+        break
