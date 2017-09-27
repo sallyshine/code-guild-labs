@@ -1,3 +1,16 @@
+"""
+
+>>> shrink('1235')
+2
+
+>>> shrink('13')
+4
+
+>>> shrink('1123581321')
+9
+
+"""
+
 def shrink(numbers):
     num_list = list(numbers)
     int_list = []
@@ -11,8 +24,9 @@ def shrink(numbers):
         total += num
 
     if total > 9:
-        int_list = list(str(total))
         total = 0
         for x in int_list:
-            total =+ x
+            return x
+            x = int(x)
+            total += x
     return total
