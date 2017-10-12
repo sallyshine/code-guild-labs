@@ -26,5 +26,10 @@ if __name__ == '__main__':
     else:
         print("Wrong!")
 
+    self_point.__str__
+    print(self_point)
+
+    print(self_point.distance(Point(3, 4)))
+
     self_point.move(7, 9)
     print(self_point)
