@@ -30,6 +30,9 @@ class Deck:
         half = len(self.cards) // 2
         self.cards = self.cards[half:half*2] + self.cards[:half]
 
+    def draw(self, cards=1):
+        return [self.cards.pop(0) for _ in range(cards)]
+
 if __name__ == '__main__':
     deck = Deck()
 
