@@ -12,7 +12,6 @@ if __name__ == '__main__':
 
     data_points = list()
 
-
     for data_point in raw_rain_data:
         data = data_point.split(' ')
         data = [item for item in data if item is not '']
@@ -41,17 +40,3 @@ if __name__ == '__main__':
 
     rainiest_year = max(year_totals.items(), key=lambda x: x[1])
     print(f'The most rainy year was: {rainiest_year[0]} with {rainiest_year[1] * 0.01} inches.')
-
-
-
-
-
-
-
-
-
-    #     if '2016' in data[0]:
-    #         year_totals.append(int(data[1]))
-    #
-    #
-    # print(sum(year_totals))
