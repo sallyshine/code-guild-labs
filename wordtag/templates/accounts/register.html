@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block title %}Wordtag | Register{% endblock %}
+
+{% block content %}
+<form method='POST'>
+  {% csrf_token %}
+  {{ form.as_p }}
+  <div><button>Register</button></div>
+  <div><a href="{% url 'accounts:login' %}">Login!</a></div>
+</form>
+{% endblock %}

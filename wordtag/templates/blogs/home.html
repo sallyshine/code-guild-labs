@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}Wordtag | home{% endblock %}
+
+{% block content %}
+  <h1>Hi {{ user.username }}, you're logged in!</h1>
+  <div>
+    <p>
+      <a href="{% url 'blogs:create' %}"><button>Create a blog!</button></a>
+    </p>
+    <div id='blogs'>
+    {% for blog in blogs %}
+      <h3>
+        <a href="{% url 'blogs:detail' pk=blog.pk %}">{{ blog.title }}</a>
+        <button class='delete-blog'>Delete</button>
+        </h3>
+    {% empty %}
+      <p>
+        You have no blogs!
+      </p>
+    {% endfor %}
+    </div>
+  </div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'js/delete_blog.js' %}"></script>
+{% endblock %}
