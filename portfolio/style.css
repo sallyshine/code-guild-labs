@@ -1,0 +1,103 @@
+@font-family {
+  font-family: "ShorelinesScriptBold";
+    src: url("../fonts/ShorelinesScriptBold.otf")
+}
+
+@font-family {
+  font-family: "Hallelujah";
+    src: url("../fonts/Hallelujah.otf")
+}
+
+@font-family {
+  font-family: "DawningofaNewDay";
+    src: url("../fonts/DawningofaNewDay.ttf")
+}
+
+@font-family {
+  font-family: "aliquam";
+    src: url("../fonts/aliquam.ttf")
+}
+
+@font-family {
+  font-family: "Halbrein";
+    src: url("../fonts/Halbrein.ttf")
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: "aliquam";
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+  min-height: 100%;
+}
+
+aside, section {
+  padding: 1em;
+}
+
+aside {
+  flex-basis: 30%;
+  padding: 0;
+  margin: 0;
+}
+
+aside .name {
+  display: block;
+  font-family: "Halbrein";
+  font-size: 38.5px;
+  word-spacing: .75em;
+  margin-bottom: 0.25em;
+  width: 100%;
+}
+
+.name img {
+  height: 300px;
+}
+
+aside ul {
+  padding-left: 0px;
+  margin: 0;
+  list-style: none;
+  letter-spacing: .2em;
+  line-height: 1.5em;
+}
+
+/*li {
+  list-style-type: none;
+  padding-right: 40px;
+  letter-spacing: .2em;
+  line-height: 1.5em;
+}*/
+section {
+  flex-basis: 70%;
+}
+
+section .four-column {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1em;
+  width: 70%;
+}
+
+section .four-column > div {
+  flex-basis: auto;
+}
+
+h4 {
+  letter-spacing: .5em;
+}
